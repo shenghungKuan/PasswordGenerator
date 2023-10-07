@@ -7,7 +7,7 @@ import javax.persistence.*;
 @Entity
 @Table
 @Component
-public class UserDetails {
+public class UserInfo {
     @Id
     @SequenceGenerator(name = " user_sequence", sequenceName = "user_sequence", allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_sequence")
@@ -18,10 +18,10 @@ public class UserDetails {
     private String username;
     private String password;
 
-    public UserDetails() {
+    public UserInfo() {
     }
 
-    public UserDetails(int id, String user, String credential, String website, String username, String password) {
+    public UserInfo(int id, String user, String credential, String website, String username, String password) {
         this.id = id;
         this.user = user;
         this.credential = credential;
@@ -30,7 +30,7 @@ public class UserDetails {
         this.password = password;
     }
 
-    public UserDetails(int id, String user, String credential) {
+    public UserInfo(int id, String user, String credential) {
         this.id = id;
         this.user = user;
         this.credential = credential;
